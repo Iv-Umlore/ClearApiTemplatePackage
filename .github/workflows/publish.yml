@@ -10,28 +10,29 @@ on:
 # джоба с использованием Убунту
 jobs:
   publish: ubuntu-latest
+  
   permissions:
     contents: read # Права на чтения РЕПО
-    package: write # Запись пакетов для дальнейшей публикации
+    packages: write # Запись пакетов для дальнейшей публикации
 
     # Шаги
   steps:
     # Копирования репо в рабочее пространство
-    - uses: actions/checkout@v4 
+    - uses: actions/checkout@v4
 
     # Установка .Net пакета версии 9.х.х
     - name: Setup .NET
-      uses: actions/dotnet@v4
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '9.x.x'
-
-    # Собираем пакет в Release-режиме
+        
+    # Сборка NuGet-пакет в Release-режиме
     - name: Pack
-      run: dotnet pack --configuration Release
+      run: dotnet pack --configuration Release 
 
     # Добавление источника для публикации
     # Публикация с использованием токена авторизации
-    - name: Publish to Github Packages
+    - name: Publish to GitHub Packages
       run: |
         dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
         dotnet nuget push bin/Release/*.nupkg --source github --api-key ${{ secrets.GITHUB_TOKEN }}
