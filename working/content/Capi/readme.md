@@ -1,0 +1,1 @@
+# Template for clean architecture C# service

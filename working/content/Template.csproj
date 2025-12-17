@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackegeType>Template</PackegeType>
+    <PackegeVersion>1.0.0</PackegeVersion>
+    <PackegeId>IvUmlore.CleanArchitecture.template</PackegeId>
+    <Title>Template for clean architecture projects</Title>
+    <Authors>Ivan Kiselev</Authors>    
+    <PackageTags>dotnet-new;templates;cleanarchitecture;microservice</PackageTags>
+    <TargetFramework>net9.0</TargetFramework>
+    <RepositoryUrl>https://github.com/Iv-Umlore/ClearApiTemplatePackage</RepositoryUrl>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageLicenseExpression>empty</PackageLicenseExpression>
+  </PropertyGroup>
+
+</Project>
