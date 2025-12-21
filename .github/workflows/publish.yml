@@ -32,7 +32,8 @@ jobs:
     
       # Собираем пакет в Release-режиме
       - name: Pack
-        run: dotnet pack --configuration Release --no-restore
+        # Так как csproj лежит не в основной дирестории репозитория - указываем путь
+        run: dotnet pack working/content/Template.csproj --configuration Release --no-restore  
     
       # Добавление источника для публикации
       # Публикация с использованием токена авторизации
