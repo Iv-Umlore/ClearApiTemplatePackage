@@ -19,25 +19,25 @@ jobs:
     runs-on: ubuntu-latest
        
     # Шаги
-  steps:
-    # Копирования репо в рабочее пространство
-    - name: Checkout repository
-      uses: actions/checkout@v4 
-
-    # Установка .Net пакета версии 9.х.х
-    - name: Setup .NET
-      uses: actions/dotnet@v4
-      with:
-        dotnet-version: '9.x.x'
-
-    # Собираем пакет в Release-режиме
-    - name: Pack
-      run: dotnet pack --configuration Release --no-restore
-
-    # Добавление источника для публикации
-    # Публикация с использованием токена авторизации
-    - name: Publish to Github Packages
-      run: |
-        dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
-        dotnet nuget push bin/Release/*.nupkg --source github --api-key ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      # Копирования репо в рабочее пространство
+      - name: Checkout repository
+        uses: actions/checkout@v4 
+    
+      # Установка .Net пакета версии 9.х.х
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.x.x'
+    
+      # Собираем пакет в Release-режиме
+      - name: Pack
+        run: dotnet pack --configuration Release --no-restore
+    
+      # Добавление источника для публикации
+      # Публикация с использованием токена авторизации
+      - name: Publish to Github Packages
+        run: |
+          dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
+          dotnet nuget push bin/Release/*.nupkg --source github --api-key ${{ secrets.GITHUB_TOKEN }}
   
