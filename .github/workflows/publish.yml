@@ -10,7 +10,7 @@ on:
 
 permissions:
   contents: read # Права на чтения РЕПО
-  package: write # Запись пакетов для дальнейшей публикации
+  packages: write # Запись пакетов для дальнейшей публикации
  
 
 # джоба с использованием Убунту
@@ -22,7 +22,7 @@ jobs:
   steps:
     # Копирования репо в рабочее пространство
     - name: Checkout repository
-    - uses: actions/checkout@v4 
+      uses: actions/checkout@v4 
 
     # Установка .Net пакета версии 9.х.х
     - name: Setup .NET
