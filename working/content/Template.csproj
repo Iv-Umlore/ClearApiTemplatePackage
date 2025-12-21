@@ -5,6 +5,7 @@
     <PackegeType>Template</PackegeType>
     <PackegeVersion>1.0.1</PackegeVersion>
     <PackegeId>IvUmlore.CleanArchitecture.template</PackegeId>
+    <IsPackable>true</IsPackable>
 
     <Title>Template for clean architecture projects</Title>
     <Authors>Ivan Kiselev</Authors>    

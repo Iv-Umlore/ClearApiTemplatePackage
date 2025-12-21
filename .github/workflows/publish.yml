@@ -35,6 +35,9 @@ jobs:
         # Так как csproj лежит не в основной дирестории репозитория - указываем путь
         run: dotnet pack working/content/Template.csproj --configuration Release --no-restore  
     
+      - name: Debug artifacts
+        run: find . -name "*.nupkg"
+    
       # Добавление источника для публикации
       # Публикация с использованием токена авторизации
       - name: Publish to Github Packages
