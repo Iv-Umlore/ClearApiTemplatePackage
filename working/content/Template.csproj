@@ -3,7 +3,7 @@
   <PropertyGroup>
     <!-- needed this must have-->
     <PackegeType>Template</PackegeType>
-    <PackegeVersion>1.0.1</PackegeVersion>
+    <PackageVersion>1.0.3</PackageVersion>
     <PackegeId>IvUmlore.CleanArchitecture.template</PackegeId>
     <IsPackable>true</IsPackable>
 
