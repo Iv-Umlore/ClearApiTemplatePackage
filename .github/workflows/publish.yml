@@ -38,6 +38,7 @@ jobs:
         # Так как csproj лежит не в основной дирестории репозитория - указываем путь
         run: dotnet pack working/content/Template.csproj --configuration Release --no-restore  
     
+      # Временный шаг, чтобы понять, куда собирается nuget пакет, чтобы после указать в nuget push
       - name: Debug artifacts
         run: find . -name "*.nupkg"
     
@@ -46,5 +47,5 @@ jobs:
       - name: Publish to Github Packages
         run: |
           dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
-          dotnet nuget push working/content/Capi/cleanApi/bin/Release/*.nupkg --source github --api-key ${{ secrets.GITHUB_TOKEN }}
+          dotnet nuget push ./working/content/bin/Release/*.nupkg --source github --api-key ${{ secrets.GITHUB_TOKEN }}
   
