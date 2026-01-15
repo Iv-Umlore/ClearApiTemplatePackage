@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <!-- needed this must have-->
-    <PackegeType>Template</PackegeType>
+    <PackageType>Template</PackageType>
     <PackageVersion>1.0.4.4</PackageVersion>
-    <PackegeId>Umlore.CleanArchitecture.Template</PackegeId>
+    <PackageId>Umlore.CleanArchitecture.Template</Package>
     <IsPackable>true</IsPackable>
 
     <Title>Template for clean architecture projects</Title>

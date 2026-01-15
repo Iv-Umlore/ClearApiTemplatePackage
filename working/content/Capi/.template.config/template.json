@@ -8,7 +8,7 @@
         "Microservices"
     ],
 
-    "identity": "UmloreCleanArchitecture.Template",
+    "identity": "Umlore.CleanArchitecture.Template",
     "name": "Template for clean architecture projects",
     "shortName": "cleanApiTemplate",
     "sourceName": "cleanApi",
