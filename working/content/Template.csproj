@@ -3,8 +3,8 @@
   <PropertyGroup>
     <!-- needed this must have-->
     <PackegeType>Template</PackegeType>
-    <PackageVersion>1.0.4.3</PackageVersion>
-    <PackegeId>IvUmlore.CleanArchitectureTemplate</PackegeId>
+    <PackageVersion>1.0.4.4</PackageVersion>
+    <PackegeId>Umlore.CleanArchitecture.Template</PackegeId>
     <IsPackable>true</IsPackable>
 
     <Title>Template for clean architecture projects</Title>
