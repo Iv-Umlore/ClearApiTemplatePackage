@@ -1,5 +1,5 @@
 // global usings
 
-global using clearApi;
-global using clearApi.Application;
-global using clearApi.Infrastrucure;
+global using cleanApi;
+global using cleanApi.Application;
+global using cleanApi.Infrastrucure;

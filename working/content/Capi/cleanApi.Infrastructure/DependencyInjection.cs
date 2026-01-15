@@ -1,4 +1,4 @@
-namespace clearApi.Infrastrucure;
+namespace cleanApi.Infrastrucure;
 
 public static class DependencyInjection
 {

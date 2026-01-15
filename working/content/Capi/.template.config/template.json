@@ -10,7 +10,7 @@
 
     "identity": "IvUmlore.CleanArchitecture.template",
     "name": "Template for clean architecture projects",
-    "shortName": "cleanApi",
+    "shortName": "cleanApiTemplate",
     "sourceName": "cleanApi",
     "preferNameDirectory": true,
     "tags": {

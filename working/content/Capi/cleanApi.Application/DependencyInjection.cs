@@ -1,4 +1,4 @@
-namespace clearApi.Application;
+namespace cleanApi.Application;
 
 public static class DependencyInjection
 {
