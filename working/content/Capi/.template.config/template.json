@@ -10,7 +10,7 @@
 
     "identity": "Umlore.CleanArchitecture.Template",
     "name": "Template for clean architecture projects",
-    "shortName": "cleanApiTemplate",
+    "shortName": "Umlore.CleanApiTemplate",
     "sourceName": "cleanApi",
     "preferNameDirectory": true,
     "tags": {
