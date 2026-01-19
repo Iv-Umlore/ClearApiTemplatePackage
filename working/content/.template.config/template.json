@@ -1,0 +1,20 @@
+{
+    "$schema": "https://json.schemastore.org/template",
+    "author": "Ivan Kiselev",
+    "classifications": [
+        "Web",
+        "Clean Architecture Proj",
+        "API",
+        "Microservices"
+    ],
+
+    "identity": "Umlore.CleanArchitecture.Template",
+    "name": "Template for clean architecture projects",
+    "shortName": "Umlore.CleanApiTemplate",
+    "sourceName": "cleanApi",
+    "preferNameDirectory": true,
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    }
+}
