@@ -1,24 +1,36 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <!-- needed this must have-->
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0.5.0</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <PackageId>Umlore.CleanArchitecture.Template</PackageId>
-    <IsPackable>true</IsPackable>
 
     <Title>Template for clean architecture projects</Title>
-    <Authors>Ivan Kiselev</Authors>    
+    <Authors>Ivan Kiselev</Authors>
+    <Description>Clean Architect for microservices with API, by stepik course, Only for tests</Description>
     <PackageTags>dotnet-new;templates;cleanarchitecture;microservice</PackageTags>
     <TargetFramework>net9.0</TargetFramework>
     <RepositoryUrl>https://github.com/Iv-Umlore/ClearApiTemplatePackage</RepositoryUrl>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
     <PackageLicenseExpression>empty</PackageLicenseExpression>
-  </PropertyGroup>
+    
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolder>content</ContentTargetFolder>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
 
+    <IsPackable>true</IsPackable>
+    
+    <!-- if not need to project build  -->    
+    <NoBuild>true</NoBuild>
+    <NoRestore>true</NoRestore>
+
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.3" />
+    <None Include=".template.config\**" Pack="true" PackagePath="" />
+    <None Include="**\*" Exclude="bin\**;obj\**;*.nupkg" Pack="true" PackagePath="" />
   </ItemGroup> 
 
 </Project>
