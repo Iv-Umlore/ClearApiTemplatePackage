@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <!-- needed this must have-->
@@ -13,7 +13,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <RepositoryUrl>https://github.com/Iv-Umlore/ClearApiTemplatePackage</RepositoryUrl>
     <PackageLicenseExpression>empty</PackageLicenseExpression>
-    
+
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolder>content</ContentTargetFolder>
