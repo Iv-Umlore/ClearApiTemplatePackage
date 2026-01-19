@@ -13,12 +13,20 @@
     <TargetFramework>net9.0</TargetFramework>
     <RepositoryUrl>https://github.com/Iv-Umlore/ClearApiTemplatePackage</RepositoryUrl>
     <PackageLicenseExpression>empty</PackageLicenseExpression>
-    <IsPackable>true</IsPackable>
     
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolder>content</ContentTargetFolder>
     <NoWarn>$(NoWarn);NU5128</NoWarn>
+
+    <IsPackable>true</IsPackable>
+
+    <!-- 
+    if not need to project build
+    <NoBuild>true</NoBuild>
+    <NoRestore>true</NoRestore>
+    -->
+
   </PropertyGroup>
   
   <ItemGroup>
