@@ -29,6 +29,8 @@
   
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.3" />
+    <None Include=".template.config\**" Pack="true" PackagePath="" />
+    <None Include="**\*" Exclude="bin\**;obj\**;*.nupkg" Pack="true" PackagePath="" />
   </ItemGroup> 
 
 </Project>
