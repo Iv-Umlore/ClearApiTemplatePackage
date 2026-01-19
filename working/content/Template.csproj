@@ -3,7 +3,7 @@
   <PropertyGroup>
     <!-- needed this must have-->
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0.5.1</PackageVersion>
+    <PackageVersion>1.0.5.2</PackageVersion>
     <PackageId>Umlore.CleanArchitecture.Template</PackageId>
 
     <Title>Template for clean architecture projects</Title>
