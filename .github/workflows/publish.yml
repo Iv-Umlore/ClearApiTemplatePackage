@@ -37,6 +37,7 @@ jobs:
       - name: Pack
         # Так как csproj лежит не в основной дирестории репозитория - указываем путь
         run: |
+            mkdir -p ./artifacts
             dotnet pack ././working/content/Template.csproj \
             --configuration Release \
             --no-restore \
